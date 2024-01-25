@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <menuitem id="menu_unikerp" name="UNIKerp Agile" sequence="0"/>
+   <menuitem id="menu_unikerp_sring"
+      sequence="1"
+      name="unikerp sprint"
+      parent="menu_unikerp"
+      action="action_spring"/>
+      <menuitem id="menu_unikerp_events"
+      sequence="2"
+      name="unikerp events"
+      parent="menu_unikerp"
+      action="action_events"/>
+</odoo>  

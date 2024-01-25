@@ -1,0 +1,53 @@
+<odoo>
+    <record id="tree_view_professor" model="ir.ui.view">
+        <field name="name">professor list</field>
+        <field name="model">university.professor</field>
+        <field name="arch" type="xml">
+            <tree>  
+                <field name="f_name"/>
+                <field name="l_name"/>
+                <field name="sexe" />
+                <field name="identity_card" />
+                <field name="address" />
+                <field name="birthday" />
+                <field name="start_date"/>
+                <field name="email"/>
+                <field name="phone"/>
+            </tree>
+        </field>
+    </record> 
+
+    <record id="form" model="ir.ui.view">
+        <field name="name">professor form</field>
+        <field name="model">university.professor</field>
+        <field name="arch" type="xml">
+            <form>  
+                <group>
+                    <field name="f_name"/>
+                    <field name="l_name"/>
+                    <field name="sexe" />
+                    <field name="identity_card" />
+                    <field name="address" />
+                    <field name="birthday" />
+                    <field name="start_date"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                </group>
+            </form>
+        </field>
+    </record>    
+
+    <record id="professor_actions_window" model="ir.actions.act_window">
+        <field name="name">professor window</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">university.professor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="university_professor" name="Professor" parent="university_menu"/>
+    <menuitem id="university_professor_list"
+      sequence="2"
+      name="List of professors"
+      parent="university_professor"
+      action="student_actions_window"/>
+</odoo>

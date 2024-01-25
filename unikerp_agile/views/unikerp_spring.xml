@@ -1,0 +1,32 @@
+<odoo>
+    <record id="tree_view_sprint" model="ir.ui.view">
+        <field name="name">spring.tree</field>
+        <field name="model">unikerp.spring</field>
+        <field name="arch" type="xml">
+            <tree>  
+                <field name="nom"/>
+                <field name="duree_sprint"/>
+            </tree>
+        </field>
+    </record> 
+    <record id="form_view_spring" model="ir.ui.view">
+        <field name="name">spring.form</field>
+        <field name="model">unikerp.spring</field>
+        <field name="arch" type="xml">
+           <form>
+                <group>           
+                        <group>
+                            <field name="nom" required='1'/>
+                            <field name="duree_sprint"/>
+                        </group>
+                </group>
+            </form>
+        </field>
+    </record> 
+    <record id="action_spring" model="ir.actions.act_window">
+        <field name="name">spring</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">unikerp.spring</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

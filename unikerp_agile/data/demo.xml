@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record model="unikerp.spring" id="spring1">
+      <field name="nom">Sprint Min</field>
+      <field name="duree_sprint">1 semaine</field>
+    </record>
+    <record model="unikerp.spring" id="sprint2">
+      <field name="nom">Sprint Medium</field>
+      <field name="duree_sprint">2 semaine</field>
+    </record>
+    <record model="unikerp.spring" id="spring3">
+      <field name="nom">Sprint max</field>
+      <field name="duree_sprint">1 mois</field>
+    </record>
+  </data>
+</odoo>
+
+
+
+

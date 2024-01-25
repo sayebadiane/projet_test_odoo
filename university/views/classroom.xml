@@ -1,0 +1,39 @@
+<odoo>
+    <record id="tree_view_classroom" model="ir.ui.view">
+        <field name="name">classroom list</field>
+        <field name="model">university.classroom</field>
+        <field name="arch" type="xml">
+            <tree>  
+                <field name="Classroom_name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record> 
+
+    <record id="form" model="ir.ui.view">
+        <field name="name">classroom" form</field>
+        <field name="model">university.classroom</field> 
+        <field name="arch" type="xml">
+            <form>  
+                <group>
+                    <field name="Classroom_name"/>
+                    <field name="code"/>
+                </group>
+            </form>
+        </field>
+    </record>    
+
+    <record id="classroom_actions_window" model="ir.actions.act_window">
+        <field name="name">classroom window</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">university.classroom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="university_classroom" name="Classroom" parent="university_menu"/>
+    <menuitem id="university_classroom_list"
+      sequence="2"
+      name="List of classroom"
+      parent="university_classroom"
+      action="classroom_actions_window"/>
+</odoo>

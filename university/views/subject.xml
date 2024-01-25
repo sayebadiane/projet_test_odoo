@@ -1,0 +1,39 @@
+<odoo>
+    <record id="tree_view_subject" model="ir.ui.view">
+        <field name="name">subject list</field>
+        <field name="model">university.subject</field>
+        <field name="arch" type="xml">
+            <tree>  
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record> 
+
+    <record id="form" model="ir.ui.view">
+        <field name="name">subject form</field>
+        <field name="model">university.subject</field> 
+        <field name="arch" type="xml">
+            <form>  
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                </group>
+            </form>
+        </field>
+    </record>    
+
+    <record id="subject_actions_window" model="ir.actions.act_window">
+        <field name="name">subject window</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">university.subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="university_subject" name="Subject" parent="university_menu"/>
+    <menuitem id="university_subject_list"
+      sequence="2"
+      name="List of subject"
+      parent="university_subject"
+      action="subject_actions_window"/>
+</odoo>

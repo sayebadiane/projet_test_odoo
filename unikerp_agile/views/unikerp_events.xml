@@ -1,0 +1,42 @@
+<odoo>
+    <record id="tree_view_events" model="ir.ui.view">
+        <field name="name">events.tree</field>
+        <field name="model">unikerp.events</field>
+        <field name="arch" type="xml">
+            <tree>  
+                <field name="name"/>
+                <field name="evenement"/>
+                <field name="product_owner_partner" />
+                <field name="scrum_master_partner" />
+                <field name="developer_partner" />
+                <field name="parties_prenantes_partner" />
+                <field name="duree_evenement"/>
+            </tree>
+        </field>
+    </record> 
+    <record id="form_view_events" model="ir.ui.view">
+        <field name="name">events.form</field>
+        <field name="model">unikerp.events</field>
+        <field name="arch" type="xml">
+           <form>
+                <group>           
+                        <group>
+                            <field name="name"/>
+                            <field name="evenement"/>
+                            <field name="product_owner_partner"/>
+                            <field name="scrum_master_partner"/>
+                            <field name="developer_partner"/>
+                            <field name="parties_prenantes_partner"/>
+                            <field name="duree_evenement"/>
+                        </group>
+                </group>
+            </form>
+        </field>
+    </record> 
+    <record id="action_events" model="ir.actions.act_window">
+        <field name="name">events</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">unikerp.events</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
